@@ -1,0 +1,59 @@
+S -> NP VP
+NP -> PR[AGR=?a] | PN | DT[AGR=?a] N[AGR=?a] | DT[AGR=?a] ADJ1 | DT[AGR=?a] ADJ2
+VP -> V[AGR=?a] | NEG1 NEG | PR1[AGR=?a] V[AGR=?a] | NEG1 NEG | V[AGR=?a] NP[AGR=?a] | NEG1 NEG
+
+NEG -> PRP NEG2 | NEG3 NP[AGR=?a] | V[AGR=?a] NEG2
+
+NEG3 ->  V[AGR=?a] NEG2
+
+PRP ->  PR1[AGR=?a] V[AGR=?a]
+ADJ1 -> N[AGR=?a] A[AGR=?a]
+ADJ2 -> A[AGR=?a] N[AGR=?a]
+NEG1 -> 'ne'
+NEG2 -> 'pas'
+
+N[AGR=[NUM='sg', PER=3, GND='m']] -> 'garcon' | 'chat' | 'Canada'
+N[AGR=[NUM='sg', PER=3, GND='f']] -> 'fille' | 'television' | 'poisson'
+
+N[AGR=[NUM='pl', PER=3, GND='m']] -> 'garcons' | 'chats'
+N[AGR=[NUM='pl', PER=3, GND='f']] -> 'filles'
+
+
+A[AGR=[NUM='sg', GND='m']] -> 'noir' | 'grand' | 'petit' | 'chaud' | 'froid'
+A[AGR=[NUM='pl', GND='m']] -> 'noirs' | 'grands' | 'petits' | 'chauds' | 'froids'
+
+A[AGR=[NUM='sg', GND='f']] -> 'noire' | 'grande' | 'petite' | 'chaude' | 'froide'
+A[AGR=[NUM='pl', GND='f']] -> 'noires' | 'grandes' | 'petites' | 'chaudes' | 'froides'
+
+DT[AGR=[NUM='sg', PER=3, GND='m']] -> 'un'
+DT[AGR=[NUM='sg', PER=3, GND='f']] -> 'une'
+
+DT[AGR=[NUM='sg', PER=3, GND='m']] -> 'le'
+DT[AGR=[NUM='sg', PER=3, GND='f']] -> 'la'
+
+DT[AGR=[NUM='pl', PER=3, GND='m']] -> 'les'
+DT[AGR=[NUM='pl', PER=3, GND='f']] -> 'les'
+
+PN[AGR=[NUM='sg', PER=3]] -> 'Amelia' | 'Andrea' | 'Montreal'
+
+PR1[AGR=[NUM='sg', GND='m']] -> 'le'
+PR1[AGR=[NUM='sg', GND='f']] ->'la'
+
+PR1[AGR=[NUM='pl', GND='m']] -> 'les'
+PR1[AGR=[NUM='pl', GND='f']] -> 'les'
+
+PR[AGR=[NUM='sg', PER=1]] -> 'je'
+PR[AGR=[NUM='sg', PER=2]] -> 'tu'
+PR[AGR=[NUM='sg', PER=3]] -> 'il' | 'elle' | 'on'
+
+PR[AGR=[NUM='pl', PER=1]] -> 'nous'
+PR[AGR=[NUM='pl', PER=2]] -> 'vous'
+PR[AGR=[NUM='pl', PER=3]] -> 'ils' | 'elles'
+
+V[AGR=[NUM='sg', PER=1]] ->  'parle' | 'mange'
+V[AGR=[NUM='sg', PER=2]] ->  'parles' | 'manges'
+V[AGR=[NUM='sg', PER=3]] ->  'parle' | 'mange'
+
+V[AGR=[NUM='pl', PER=1]] ->  'parlons' | 'mangons'
+V[AGR=[NUM='pl', PER=2]] ->  'parlez' | 'mangez'
+V[AGR=[NUM='pl', PER=3]] ->  'parlent' | 'mangent'
